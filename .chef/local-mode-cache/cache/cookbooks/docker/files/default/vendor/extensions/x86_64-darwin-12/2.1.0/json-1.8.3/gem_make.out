@@ -1,0 +1,10 @@
+/opt/chefdk/embedded/bin/ruby -r ./siteconf20150812-79468-1btq144.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
+installing default libraries
