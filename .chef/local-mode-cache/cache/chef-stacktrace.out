@@ -1,12 +1,22 @@
-Generated at 2015-10-10 06:35:31 +0000
-Docker::Error::NotFoundError: docker_service[default] (docker-mongodb::default line 10) had an error: Docker::Error::NotFoundError: client and server don't have same version (client : 1.16, server: 1.12)
+Generated at 2015-10-10 07:09:33 +0000
+Docker::Error::NotFoundError: docker_container[launch] (docker-mongodb::default line 28) had an error: Docker::Error::NotFoundError: No such image: neerjaj2/mongodb-docker:latest (tag: latest)
 
 /home/ubuntu/chef-repo/.chef/local-mode-cache/cache/cookbooks/docker/files/default/vendor/gems/docker-api-1.22.4/lib/docker/connection.rb:46:in `rescue in request'
 /home/ubuntu/chef-repo/.chef/local-mode-cache/cache/cookbooks/docker/files/default/vendor/gems/docker-api-1.22.4/lib/docker/connection.rb:38:in `request'
 /home/ubuntu/chef-repo/.chef/local-mode-cache/cache/cookbooks/docker/files/default/vendor/gems/docker-api-1.22.4/lib/docker/connection.rb:65:in `block (2 levels) in <class:Connection>'
-/home/ubuntu/chef-repo/.chef/local-mode-cache/cache/cookbooks/docker/files/default/vendor/gems/docker-api-1.22.4/lib/docker.rb:110:in `info'
-/home/ubuntu/chef-repo/.chef/local-mode-cache/cache/cookbooks/docker/libraries/provider_docker_service.rb:40:in `load_current_resource'
-/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.5.1/lib/chef/provider.rb:127:in `run_action'
+/home/ubuntu/chef-repo/.chef/local-mode-cache/cache/cookbooks/docker/files/default/vendor/gems/docker-api-1.22.4/lib/docker/container.rb:234:in `create'
+/home/ubuntu/chef-repo/.chef/local-mode-cache/cache/cookbooks/docker/libraries/provider_docker_container.rb:121:in `create_container'
+/home/ubuntu/chef-repo/.chef/local-mode-cache/cache/cookbooks/docker/libraries/provider_docker_container.rb:203:in `block (2 levels) in <class:DockerContainer>'
+/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.5.1/lib/chef/mixin/why_run.rb:52:in `call'
+/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.5.1/lib/chef/mixin/why_run.rb:52:in `add_action'
+/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.5.1/lib/chef/provider.rb:175:in `converge_by'
+/home/ubuntu/chef-repo/.chef/local-mode-cache/cache/cookbooks/docker/libraries/provider_docker_container.rb:202:in `block in <class:DockerContainer>'
+/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.5.1/lib/chef/provider.rb:362:in `action_create'
+/home/ubuntu/chef-repo/.chef/local-mode-cache/cache/cookbooks/docker/libraries/provider_docker_container.rb:268:in `block in <class:DockerContainer>'
+/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.5.1/lib/chef/provider.rb:362:in `action_run'
+/home/ubuntu/chef-repo/.chef/local-mode-cache/cache/cookbooks/docker/libraries/provider_docker_container.rb:275:in `block in <class:DockerContainer>'
+/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.5.1/lib/chef/provider.rb:362:in `action_run_if_missing'
+/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.5.1/lib/chef/provider.rb:144:in `run_action'
 /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.5.1/lib/chef/resource.rb:585:in `run_action'
 /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.5.1/lib/chef/runner.rb:49:in `run_action'
 /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.5.1/lib/chef/runner.rb:81:in `block (2 levels) in converge'
